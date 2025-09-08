@@ -1,13 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SecTechHub - Enterprise Network Security</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/App.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecTechHub - Enterprise Network Security</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .hero {
+      background: linear-gradient(90deg, #1e3a8a, #1d4ed8);
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem;
+    }
+    .card {
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      margin: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    .btn-primary {
+      background-color: #dc2626;
+      color: white;
+    }
+    .btn-secondary {
+      background-color: transparent;
+      color: #1e3a8a;
+      border: 2px solid #1e3a8a;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    .vendor-icon {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .dark-mode-toggle {
+      background-color: #1e3a8a;
+      color: white;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-gradient-to-r from-blue-900 to-blue-700 shadow-lg">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <div class="h-10 w-10 rounded-lg bg-red-600 flex items-center justify-center">
+          <i class="fas fa-shield-alt text-white"></i>
+        </div>
+        <h1 class="text-2xl font-bold text-white">SecTechHub</h1>
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#" class="text-white hover:text-blue-200 transition">Home</a>
+        <a href="#" class="text-white hover:text-blue-200 transition">Firewalls</a>
+        <a href="#" class="text-white hover:text-blue-200 transition">Zscaler</a>
+        <a href="#" class="text-white hover:text-blue-200 transition">F5</a>
+        <a href="#" class="text-white hover:text-blue-200 transition">Zero Trust</a>
+        <a href="#" class="text-white hover:text-blue-200 transition">Guides</a>
+      </nav>
+      <button class="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Your Trusted Source for Enterprise Network Security</h2>
+    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">In-depth guides, product comparisons, and architecture diagrams for Palo Alto, Zscaler, F5, and other enterprise security solutions.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#" class="btn btn-primary">Get Started</a>
+      <a href="#" class="btn btn-secondary">View All Guides</a>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="py-12 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8 md:flex md:items-center md:justify-between">
+        <div class="mb-6 md:mb-0">
+          <h3 class="text-2xl font-bold mb-2">Get Weekly Network Security Briefings</h3>
+          <p class="text-gray-600 dark:text-gray-300">Stay updated with the latest in enterprise security, product updates, and expert guides.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-2">
+          <input type="email" placeholder="Enter your email" class="px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800" />
+          <button class="btn btn-primary">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Articles -->
+  <section class="py-12 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Article 1 -->
+        <div class="card bg-white dark:bg-gray-700">
+          <img src="https://placehold.co/600x400/1e3a8a/ffffff?text=Palo+Alto+Firewall" alt="Palo Alto Firewall" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-semibold px-2 py-1 rounded">Firewalls</span>
+            <h3 class="text-xl font-bold mb-3">Palo Alto Firewall: Complete Beginner’s Setup Guide (2025)</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Step-by-step configuration for Palo Alto NGFW including App-ID, User-ID, and security policies.</p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <div class="w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center text-sm font-medium">AC</div>
+                <div class="ml-3">
+                  <p class="text-sm font-medium">Alex Chen</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">May 15, 2025</p>
+                </div>
+              </div>
+              <a href="#" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="card bg-white dark:bg-gray-700">
+          <img src="https://placehold.co/600x400/dc2626/ffffff?text=Zscaler+ZIA+vs+ZPA" alt="Zscaler ZIA vs ZPA" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-semibold px-2 py-1 rounded">Secure Web Gateway</span>
+            <h3 class="text-xl font-bold mb-3">Zscaler ZIA vs ZPA: What’s the Difference?</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Understanding Zscaler's Internet Access versus Private Access for Zero Trust Network Architecture.</p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <div class="w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center text-sm font-medium">PS</div>
+                <div class="ml-3">
+                  <p class="text-sm font-medium">Priya Sharma</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">May 14, 2025</p>
+                </div>
+              </div>
+              <a href="#" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="card bg-white dark:bg-gray-700">
+          <img src="https://placehold.co/600x400/059669/ffffff?text=F5+BIG-IP+iRules" alt="F5 BIG-IP Load Balancer" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-semibold px-2 py-1 rounded">Load Balancing</span>
+            <h3 class="text-xl font-bold mb-3">F5 BIG-IP Load Balancer: iRule Examples for Security Engineers</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Practical iRule scripts for SSL offloading, persistence, and WAF integration on F5 BIG-IP platforms.</p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <div class="w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center text-sm font-medium">MJ</div>
+                <div class="ml-3">
+                  <p class="text-sm font-medium">Marcus Johnson</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">May 13, 2025</p>
+                </div>
+              </div>
+              <a href="#" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium">Read More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vendor Quick Access -->
+  <section class="py-12 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">Enterprise Security Solutions</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <div class="bg-red-600 text-white p-6 text-center rounded-xl">
+          <i class="fas fa-fire text-3xl mb-3"></i>
+          <h3 class="font-bold text-lg">Palo Alto</h3>
+        </div>
+        <div class="bg-blue-600 text-white p-6 text-center rounded-xl">
+          <i class="fas fa-globe text-3xl mb-3"></i>
+          <h3 class="font-bold text-lg">Zscaler</h3>
+        </div>
+        <div class="bg-green-600 text-white p-6 text-center rounded-xl">
+          <i class="fas fa-balance-scale text-3xl mb-3"></i>
+          <h3 class="font-bold text-lg">F5</h3>
+        </div>
+        <div class="bg-yellow-600 text-white p-6 text-center rounded-xl">
+          <i class="fas fa-shield-alt text-3xl mb-3"></i>
+          <h3 class="font-bold text-lg">Fortinet</h3>
+        </div>
+        <div class="bg-gray-600 text-white p-6 text-center rounded-xl">
+          <i class="fas fa-cloud text-3xl mb-3"></i>
+          <h3 class="font-bold text-lg">Cisco</h3>
+        </div>
+        <div class="bg-orange-600 text-white p-6 text-center rounded-xl">
+          <i class="fas fa-chart-bar text-3xl mb-3"></i>
+          <h3 class="font-bold text-lg">Splunk</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <div class="h-8 w-8 rounded-lg bg-red-600 flex items-center justify-center">
+              <i class="fas fa-shield-alt text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold">SecTechHub</h3>
+          </div>
+          <p class="text-gray-400 mb-4">Your comprehensive resource for enterprise network security technologies and best practices.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition">FB</a>
+            <a href="#" class="text-gray-400 hover:text-white transition">TW</a>
+            <a href="#" class="text-gray-400 hover:text-white transition">LI</a>
+            <a href="#" class="text-gray-400 hover:text-white transition">YT</a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4">Products</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white transition">Palo Alto Firewalls</a></li>
+            <li><a href="#" class="hover:text-white transition">Zscaler ZIA/ZPA</a></li>
+            <li><a href="#" class="hover:text-white transition">F5 BIG-IP</a></li>
+            <li><a href="#" class="hover:text-white transition">Splunk SIEM</a></li>
+            <li><a href="#" class="hover:text-white transition">CrowdStrike EDR</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4">Resources</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white transition">How-To Guides</a></li>
+            <li><a href="#" class="hover:text-white transition">Architecture Diagrams</a></li>
+            <li><a href="#" class="hover:text-white transition">Configuration Snippets</a></li>
+            <li><a href="#" class="hover:text-white transition">Comparison Tables</a></li>
+            <li><a href="#" class="hover:text-white transition">Lab Exercises</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4">Legal</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition">Cookie Policy</a></li>
+            <li><a href="#" class="hover:text-white transition">Disclaimer</a></li>
+            <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 SecTechHub. All rights reserved. This site is for educational purposes only.</p>
+        <p class="mt-2 text-sm">Palo Alto, Zscaler, F5 and other product names are trademarks of their respective companies.</p>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
