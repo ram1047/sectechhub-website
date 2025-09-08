@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom/client";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All");
 
-  // Mock articles data (since we can't fetch from Strapi in preview)
+  // Mock articles data
   const articles = [
     {
       id: 1,
@@ -378,4 +379,6 @@ const App = () => {
   );
 };
 
-export default App;
+// Render the app
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
