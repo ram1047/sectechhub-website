@@ -36,11 +36,13 @@
     }
     [data-page] { display: none; }
     [data-page="home"] { display: block; }
-    body.show-page-courses [data-page="courses"] { display: block; }
+    body.show-page-all-courses [data-page="all-courses"] { display: block; }
     body.show-page-palo-alto [data-page="palo-alto"] { display: block; }
-    body.show-page-zscaler [data-page="zscaler"] { display: block; }
     body.show-page-f5 [data-page="f5"] { display: block; }
+    body.show-page-cisco [data-page="cisco"] { display: block; }
+    body.show-page-zscaler [data-page="zscaler"] { display: block; }
     body.show-page-ceh [data-page="ceh"] { display: block; }
+    body.show-page-pentesting [data-page="pentesting"] { display: block; }
     body.show-page-security-plus [data-page="security-plus"] { display: block; }
     body.show-page-contact [data-page="contact"] { display: block; }
   </style>
@@ -57,7 +59,7 @@
       </div>
       <nav class="hidden md:flex space-x-6">
         <a href="#" class="text-white hover:text-blue-300 transition" onclick="showPage('home'); return false;">Home</a>
-        <a href="#" class="text-white hover:text-blue-300 transition" onclick="showPage('courses'); return false;">Courses</a>
+        <a href="#" class="text-white hover:text-blue-300 transition" onclick="showPage('all-courses'); return false;">All Courses</a>
         <a href="#" class="text-white hover:text-blue-300 transition" onclick="showPage('contact'); return false;">Contact</a>
         <a href="#" class="text-white hover:text-blue-300 transition">About</a>
       </nav>
@@ -77,9 +79,9 @@
     <!-- Hero -->
     <section class="hero">
       <h1 class="text-5xl font-extrabold mb-4">Cybersecurity Training That Matters</h1>
-      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Master Palo Alto, Zscaler, F5, CEH, and more with industry-leading hands-on labs and expert instructors.</p>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Master Palo Alto, F5, Cisco, Pentesting, Zscaler, and more with industry-leading hands-on labs and expert instructors.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#" class="btn btn-primary" onclick="showPage('courses'); return false;">Explore Courses</a>
+        <a href="#" class="btn btn-primary" onclick="showPage('all-courses'); return false;">Explore All Courses</a>
         <a href="#" class="btn btn-secondary" onclick="showPage('contact'); return false;">Get in Touch</a>
       </div>
     </section>
@@ -95,27 +97,30 @@
             <div class="p-6">
               <h3 class="text-xl font-bold mb-3">Palo Alto Firewall Administrator</h3>
               <p class="text-gray-600 dark:text-gray-300 mb-4">Learn to configure, manage, and secure networks with Palo Alto NGFW.</p>
-              <a href="#" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium" onclick="showPage('palo-alto'); return false;">View Syllabus →</a>
+              <p class="text-green-600 font-bold mb-3">₹25,000</p>
+              <a href="#" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium" onclick="showPage('palo-alto'); return false;">View Details →</a>
             </div>
           </div>
 
           <!-- Course 2 -->
           <div class="card bg-white dark:bg-gray-700">
-            <img src="https://placehold.co/600x400/0ea5e9/ffffff?text=Zscaler" alt="Zscaler" class="w-full h-48 object-cover" />
+            <img src="https://placehold.co/600x400/059669/ffffff?text=F5+BIG-IP" alt="F5 BIG-IP" class="w-full h-48 object-cover" />
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-3">Zscaler Certified Associate</h3>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">Master Zero Trust and cloud security with Zscaler Internet & Private Access.</p>
-              <a href="#" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium" onclick="showPage('zscaler'); return false;">View Syllabus →</a>
+              <h3 class="text-xl font-bold mb-3">F5 BIG-IP Administrator</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">Deploy and manage application delivery, load balancing, and WAF with F5.</p>
+              <p class="text-green-600 font-bold mb-3">₹28,000</p>
+              <a href="#" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium" onclick="showPage('f5'); return false;">View Details →</a>
             </div>
           </div>
 
           <!-- Course 3 -->
           <div class="card bg-white dark:bg-gray-700">
-            <img src="https://placehold.co/600x400/059669/ffffff?text=F5+BIG-IP" alt="F5 BIG-IP" class="w-full h-48 object-cover" />
+            <img src="https://placehold.co/600x400/dc2626/ffffff?text=Cisco+ISE" alt="Cisco ISE" class="w-full h-48 object-cover" />
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-3">F5 BIG-IP Administrator</h3>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">Deploy and manage application delivery, load balancing, and WAF with F5.</p>
-              <a href="#" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium" onclick="showPage('f5'); return false;">View Syllabus →</a>
+              <h3 class="text-xl font-bold mb-3">Cisco ISE & Identity Services</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">Master network access control and identity management with Cisco ISE.</p>
+              <p class="text-green-600 font-bold mb-3">₹30,000</p>
+              <a href="#" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium" onclick="showPage('cisco'); return false;">View Details →</a>
             </div>
           </div>
         </div>
@@ -123,8 +128,8 @@
     </section>
   </div>
 
-  <!-- ========== COURSES PAGE ========== -->
-  <div data-page="courses">
+  <!-- ========== ALL COURSES PAGE ========== -->
+  <div data-page="all-courses">
     <!-- Hero -->
     <section class="hero">
       <h1 class="text-4xl font-bold">All Cybersecurity Courses</h1>
@@ -139,19 +144,10 @@
           <div class="card bg-white dark:bg-gray-700">
             <img src="https://placehold.co/600x400/1e3a8a/ffffff?text=Palo+Alto" alt="Palo Alto" class="w-full h-48 object-cover" />
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-3">Palo Alto Firewall Administrator</h3>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">Master next-gen firewall configuration and policy management.</p>
+              <h3 class="text-xl font-bold mb-2">Palo Alto Firewall Administrator</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-3">Master next-gen firewall configuration and policy management.</p>
+              <p class="text-green-600 font-bold mb-3">₹25,000</p>
               <a href="#" class="btn btn-primary" onclick="showPage('palo-alto'); return false;">View Details</a>
-            </div>
-          </div>
-
-          <!-- Zscaler -->
-          <div class="card bg-white dark:bg-gray-700">
-            <img src="https://placehold.co/600x400/0ea5e9/ffffff?text=Zscaler" alt="Zscaler" class="w-full h-48 object-cover" />
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-3">Zscaler Certified Associate</h3>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">Implement Zero Trust with ZIA and ZPA in cloud environments.</p>
-              <a href="#" class="btn btn-primary" onclick="showPage('zscaler'); return false;">View Details</a>
             </div>
           </div>
 
@@ -159,19 +155,54 @@
           <div class="card bg-white dark:bg-gray-700">
             <img src="https://placehold.co/600x400/059669/ffffff?text=F5+BIG-IP" alt="F5" class="w-full h-48 object-cover" />
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-3">F5 BIG-IP Administrator</h3>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">Learn load balancing, iRules, and WAF with F5 application delivery.</p>
+              <h3 class="text-xl font-bold mb-2">F5 BIG-IP Administrator</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-3">Learn load balancing, iRules, and WAF with F5 application delivery.</p>
+              <p class="text-green-600 font-bold mb-3">₹28,000</p>
               <a href="#" class="btn btn-primary" onclick="showPage('f5'); return false;">View Details</a>
+            </div>
+          </div>
+
+          <!-- Cisco ISE -->
+          <div class="card bg-white dark:bg-gray-700">
+            <img src="https://placehold.co/600x400/dc2626/ffffff?text=Cisco+ISE" alt="Cisco ISE" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Cisco ISE & Identity Services</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-3">Master network access control and identity management with Cisco ISE.</p>
+              <p class="text-green-600 font-bold mb-3">₹30,000</p>
+              <a href="#" class="btn btn-primary" onclick="showPage('cisco'); return false;">View Details</a>
+            </div>
+          </div>
+
+          <!-- Zscaler -->
+          <div class="card bg-white dark:bg-gray-700">
+            <img src="https://placehold.co/600x400/0ea5e9/ffffff?text=Zscaler" alt="Zscaler" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Zscaler Certified Associate</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-3">Implement Zero Trust with ZIA and ZPA in cloud environments.</p>
+              <p class="text-green-600 font-bold mb-3">₹22,000</p>
+              <a href="#" class="btn btn-primary" onclick="showPage('zscaler'); return false;">View Details</a>
             </div>
           </div>
 
           <!-- CEH -->
           <div class="card bg-white dark:bg-gray-700">
-            <img src="https://placehold.co/600x400/dc2626/ffffff?text=CEH" alt="CEH" class="w-full h-48 object-cover" />
+            <img src="https://placehold.co/600x400/7c3aed/ffffff?text=CEH" alt="CEH" class="w-full h-48 object-cover" />
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-3">Certified Ethical Hacker (CEH)</h3>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">Learn penetration testing, vulnerability assessment, and hacking tools.</p>
+              <h3 class="text-xl font-bold mb-2">Certified Ethical Hacker (CEH)</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-3">Learn penetration testing, vulnerability assessment, and hacking tools.</p>
+              <p class="text-green-600 font-bold mb-3">₹35,000</p>
               <a href="#" class="btn btn-primary" onclick="showPage('ceh'); return false;">View Details</a>
+            </div>
+          </div>
+
+          <!-- Pentesting -->
+          <div class="card bg-white dark:bg-gray-700">
+            <img src="https://placehold.co/600x400/ea580c/ffffff?text=Pentesting" alt="Pentesting" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Advanced Network Pentesting</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-3">Hands-on penetration testing for networks, web apps, and cloud.</p>
+              <p class="text-green-600 font-bold mb-3">₹40,000</p>
+              <a href="#" class="btn btn-primary" onclick="showPage('pentesting'); return false;">View Details</a>
             </div>
           </div>
 
@@ -179,8 +210,9 @@
           <div class="card bg-white dark:bg-gray-700">
             <img src="https://placehold.co/600x400/7c3aed/ffffff?text=Security%2B" alt="Security+" class="w-full h-48 object-cover" />
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-3">CompTIA Security+</h3>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">Foundational cybersecurity knowledge for IT professionals.</p>
+              <h3 class="text-xl font-bold mb-2">CompTIA Security+</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-3">Foundational cybersecurity knowledge for IT professionals.</p>
+              <p class="text-green-600 font-bold mb-3">₹18,000</p>
               <a href="#" class="btn btn-primary" onclick="showPage('security-plus'); return false;">View Details</a>
             </div>
           </div>
@@ -209,6 +241,7 @@
           <p class="mb-6">This course provides in-depth knowledge of Palo Alto Networks next-generation firewalls. Learn to configure, manage, and troubleshoot Palo Alto firewalls in enterprise environments.</p>
 
           <h3 class="text-xl font-bold mb-4">Duration: 5 Days | Level: Intermediate</h3>
+          <h3 class="text-xl font-bold mb-4 text-green-600">Fee: ₹25,000</h3>
 
           <h3 class="text-xl font-bold mb-4">Syllabus</h3>
           <ul class="space-y-3">
@@ -247,69 +280,7 @@
           </ul>
 
           <div class="mt-8 flex flex-wrap gap-4">
-            <a href="#" class="btn btn-secondary" onclick="showPage('courses'); return false;">← Back to Courses</a>
-            <a href="#" class="btn btn-primary" onclick="showPage('contact'); return false;">Enroll Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- ========== ZSCALER PAGE ========== -->
-  <div data-page="zscaler">
-    <!-- Hero -->
-    <section class="hero">
-      <h1 class="text-4xl font-bold">Zscaler Certified Associate (ZCA)</h1>
-      <p class="mt-4 text-xl">Official Training Syllabus</p>
-    </section>
-
-    <!-- Content -->
-    <section class="py-12">
-      <div class="container mx-auto px-4">
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
-          <h2 class="text-2xl font-bold mb-6">Course Overview</h2>
-          <p class="mb-6">Master Zscaler Internet Access (ZIA) and Zscaler Private Access (ZPA) to implement Zero Trust security in your organization.</p>
-
-          <h3 class="text-xl font-bold mb-4">Duration: 4 Days | Level: Intermediate</h3>
-
-          <h3 class="text-xl font-bold mb-4">Syllabus</h3>
-          <ul class="space-y-3">
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2 mt-1">•</span>
-              <span><strong>Introduction to Zscaler</strong> — Cloud Security, SASE, Zero Trust Architecture</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2 mt-1">•</span>
-              <span><strong>Zscaler Internet Access (ZIA)</strong> — Web Filtering, SSL Inspection, CASB, DLP</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2 mt-1">•</span>
-              <span><strong>Zscaler Private Access (ZPA)</strong> — ZTNA, Application Segmentation, Service Edges</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2 mt-1">•</span>
-              <span><strong>Deployment Models</strong> — PAC Files, Zscaler Client Connector, GRE Tunnels</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2 mt-1">•</span>
-              <span><strong>Policy Configuration</strong> — URL Filtering, Bandwidth Control, Threat Prevention</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2 mt-1">•</span>
-              <span><strong>Reporting & Analytics</strong> — Security Logs, User Activity, Threat Dashboard</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2 mt-1">•</span>
-              <span><strong>Integration</strong> — Azure AD, Okta, Splunk, SIEM</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 mr-2 mt-1">•</span>
-              <span><strong>Hands-on Labs</strong> — Real-world ZIA/ZPA configuration</span>
-            </li>
-          </ul>
-
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a href="#" class="btn btn-secondary" onclick="showPage('courses'); return false;">← Back to Courses</a>
+            <a href="#" class="btn btn-secondary" onclick="showPage('all-courses'); return false;">← Back to All Courses</a>
             <a href="#" class="btn btn-primary" onclick="showPage('contact'); return false;">Enroll Now</a>
           </div>
         </div>
@@ -333,6 +304,7 @@
           <p class="mb-6">Learn to deploy, configure, and manage F5 BIG-IP systems for load balancing, application delivery, and security.</p>
 
           <h3 class="text-xl font-bold mb-4">Duration: 5 Days | Level: Intermediate</h3>
+          <h3 class="text-xl font-bold mb-4 text-green-600">Fee: ₹28,000</h3>
 
           <h3 class="text-xl font-bold mb-4">Syllabus</h3>
           <ul class="space-y-3">
@@ -371,7 +343,133 @@
           </ul>
 
           <div class="mt-8 flex flex-wrap gap-4">
-            <a href="#" class="btn btn-secondary" onclick="showPage('courses'); return false;">← Back to Courses</a>
+            <a href="#" class="btn btn-secondary" onclick="showPage('all-courses'); return false;">← Back to All Courses</a>
+            <a href="#" class="btn btn-primary" onclick="showPage('contact'); return false;">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ========== CISCO PAGE ========== -->
+  <div data-page="cisco">
+    <!-- Hero -->
+    <section class="hero">
+      <h1 class="text-4xl font-bold">Cisco ISE & Identity Services</h1>
+      <p class="mt-4 text-xl">Official Training Syllabus</p>
+    </section>
+
+    <!-- Content -->
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+          <h2 class="text-2xl font-bold mb-6">Course Overview</h2>
+          <p class="mb-6">Master Cisco Identity Services Engine (ISE) for network access control, authentication, and policy enforcement.</p>
+
+          <h3 class="text-xl font-bold mb-4">Duration: 5 Days | Level: Intermediate</h3>
+          <h3 class="text-xl font-bold mb-4 text-green-600">Fee: ₹30,000</h3>
+
+          <h3 class="text-xl font-bold mb-4">Syllabus</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2 mt-1">•</span>
+              <span><strong>Introduction to Cisco ISE</strong> — Architecture, components, deployment models</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2 mt-1">•</span>
+              <span><strong>Authentication & Authorization</strong> — 802.1X, MAB, WebAuth, TACACS+</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2 mt-1">•</span>
+              <span><strong>Profiling & Posture</strong> — Device profiling, compliance checks, remediation</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2 mt-1">•</span>
+              <span><strong>Guest Access</strong> — Self-registration, sponsor portals, guest policies</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2 mt-1">•</span>
+              <span><strong>Policy Enforcement</strong> — Authorization policies, ACLs, VLAN assignment</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2 mt-1">•</span>
+              <span><strong>Monitoring & Troubleshooting</strong> — Live logs, reports, alarms</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2 mt-1">•</span>
+              <span><strong>Integration</strong> — Active Directory, LDAP, RADIUS, SAML</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2 mt-1">•</span>
+              <span><strong>Hands-on Labs</strong> — Real-world ISE configuration scenarios</span>
+            </li>
+          </ul>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#" class="btn btn-secondary" onclick="showPage('all-courses'); return false;">← Back to All Courses</a>
+            <a href="#" class="btn btn-primary" onclick="showPage('contact'); return false;">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ========== ZSCALER PAGE ========== -->
+  <div data-page="zscaler">
+    <!-- Hero -->
+    <section class="hero">
+      <h1 class="text-4xl font-bold">Zscaler Certified Associate (ZCA)</h1>
+      <p class="mt-4 text-xl">Official Training Syllabus</p>
+    </section>
+
+    <!-- Content -->
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+          <h2 class="text-2xl font-bold mb-6">Course Overview</h2>
+          <p class="mb-6">Master Zscaler Internet Access (ZIA) and Zscaler Private Access (ZPA) to implement Zero Trust security in your organization.</p>
+
+          <h3 class="text-xl font-bold mb-4">Duration: 4 Days | Level: Intermediate</h3>
+          <h3 class="text-xl font-bold mb-4 text-green-600">Fee: ₹22,000</h3>
+
+          <h3 class="text-xl font-bold mb-4">Syllabus</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2 mt-1">•</span>
+              <span><strong>Introduction to Zscaler</strong> — Cloud Security, SASE, Zero Trust Architecture</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2 mt-1">•</span>
+              <span><strong>Zscaler Internet Access (ZIA)</strong> — Web Filtering, SSL Inspection, CASB, DLP</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2 mt-1">•</span>
+              <span><strong>Zscaler Private Access (ZPA)</strong> — ZTNA, Application Segmentation, Service Edges</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2 mt-1">•</span>
+              <span><strong>Deployment Models</strong> — PAC Files, Zscaler Client Connector, GRE Tunnels</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2 mt-1">•</span>
+              <span><strong>Policy Configuration</strong> — URL Filtering, Bandwidth Control, Threat Prevention</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2 mt-1">•</span>
+              <span><strong>Reporting & Analytics</strong> — Security Logs, User Activity, Threat Dashboard</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2 mt-1">•</span>
+              <span><strong>Integration</strong> — Azure AD, Okta, Splunk, SIEM</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2 mt-1">•</span>
+              <span><strong>Hands-on Labs</strong> — Real-world ZIA/ZPA configuration</span>
+            </li>
+          </ul>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#" class="btn btn-secondary" onclick="showPage('all-courses'); return false;">← Back to All Courses</a>
             <a href="#" class="btn btn-primary" onclick="showPage('contact'); return false;">Enroll Now</a>
           </div>
         </div>
@@ -395,6 +493,7 @@
           <p class="mb-6">Learn the latest commercial-grade hacking tools, techniques, and methodologies used by hackers and information security professionals.</p>
 
           <h3 class="text-xl font-bold mb-4">Duration: 5 Days | Level: Intermediate</h3>
+          <h3 class="text-xl font-bold mb-4 text-green-600">Fee: ₹35,000</h3>
 
           <h3 class="text-xl font-bold mb-4">Syllabus</h3>
           <ul class="space-y-3">
@@ -433,7 +532,70 @@
           </ul>
 
           <div class="mt-8 flex flex-wrap gap-4">
-            <a href="#" class="btn btn-secondary" onclick="showPage('courses'); return false;">← Back to Courses</a>
+            <a href="#" class="btn btn-secondary" onclick="showPage('all-courses'); return false;">← Back to All Courses</a>
+            <a href="#" class="btn btn-primary" onclick="showPage('contact'); return false;">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ========== PENTESTING PAGE ========== -->
+  <div data-page="pentesting">
+    <!-- Hero -->
+    <section class="hero">
+      <h1 class="text-4xl font-bold">Advanced Network Pentesting</h1>
+      <p class="mt-4 text-xl">Official Training Syllabus</p>
+    </section>
+
+    <!-- Content -->
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+          <h2 class="text-2xl font-bold mb-6">Course Overview</h2>
+          <p class="mb-6">Hands-on penetration testing for networks, web applications, and cloud environments using industry-standard tools and methodologies.</p>
+
+          <h3 class="text-xl font-bold mb-4">Duration: 5 Days | Level: Advanced</h3>
+          <h3 class="text-xl font-bold mb-4 text-green-600">Fee: ₹40,000</h3>
+
+          <h3 class="text-xl font-bold mb-4">Syllabus</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <span class="text-orange-600 mr-2 mt-1">•</span>
+              <span><strong>Reconnaissance & Scanning</strong> — Passive/active recon, Nmap, Nessus</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-orange-600 mr-2 mt-1">•</span>
+              <span><strong>Network Exploitation</strong> — Metasploit, Cobalt Strike, lateral movement</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-orange-600 mr-2 mt-1">•</span>
+              <span><strong>Web Application Testing</strong> — OWASP Top 10, Burp Suite, SQLi, XSS</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-orange-600 mr-2 mt-1">•</span>
+              <span><strong>Wireless & Mobile Testing</strong> — WPA2 cracking, Android/iOS app testing</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-orange-600 mr-2 mt-1">•</span>
+              <span><strong>Cloud Security Testing</strong> — AWS, Azure, GCP misconfigurations</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-orange-600 mr-2 mt-1">•</span>
+              <span><strong>Post-Exploitation</strong> — Privilege escalation, persistence, data exfiltration</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-orange-600 mr-2 mt-1">•</span>
+              <span><strong>Reporting & Remediation</strong> — Writing pentest reports, remediation guidance</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-orange-600 mr-2 mt-1">•</span>
+              <span><strong>Hands-on Labs</strong> — Real-world pentesting scenarios</span>
+            </li>
+          </ul>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#" class="btn btn-secondary" onclick="showPage('all-courses'); return false;">← Back to All Courses</a>
             <a href="#" class="btn btn-primary" onclick="showPage('contact'); return false;">Enroll Now</a>
           </div>
         </div>
@@ -457,6 +619,7 @@
           <p class="mb-6">Build a solid foundation in cybersecurity with CompTIA Security+, the first security certification IT professionals should earn.</p>
 
           <h3 class="text-xl font-bold mb-4">Duration: 5 Days | Level: Beginner</h3>
+          <h3 class="text-xl font-bold mb-4 text-green-600">Fee: ₹18,000</h3>
 
           <h3 class="text-xl font-bold mb-4">Syllabus</h3>
           <ul class="space-y-3">
@@ -483,7 +646,7 @@
           </ul>
 
           <div class="mt-8 flex flex-wrap gap-4">
-            <a href="#" class="btn btn-secondary" onclick="showPage('courses'); return false;">← Back to Courses</a>
+            <a href="#" class="btn btn-secondary" onclick="showPage('all-courses'); return false;">← Back to All Courses</a>
             <a href="#" class="btn btn-primary" onclick="showPage('contact'); return false;">Enroll Now</a>
           </div>
         </div>
@@ -586,7 +749,7 @@
           <h4 class="font-bold mb-4">Quick Links</h4>
           <ul class="space-y-2 text-gray-400">
             <li><a href="#" class="hover:text-white transition" onclick="showPage('home'); return false;">Home</a></li>
-            <li><a href="#" class="hover:text-white transition" onclick="showPage('courses'); return false;">Courses</a></li>
+            <li><a href="#" class="hover:text-white transition" onclick="showPage('all-courses'); return false;">All Courses</a></li>
             <li><a href="#" class="hover:text-white transition" onclick="showPage('contact'); return false;">Contact</a></li>
           </ul>
         </div>
